@@ -1,32 +1,8 @@
-<style>
-    .shortParagraph p {
-        word-break: break-word;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        line-height: 16px; /* fallback */
-        max-height: 32px; /* fallback */
-        -webkit-line-clamp: 2; /* number of lines to show */
-        -webkit-box-orient: vertical;
-    }
-
-    .shortParagraph p {
-        color: green;
-    }
-
-    .shortParagraph p:first-child {
-        background-color: orange;
-    }
-
-</style>
-
-
 <section class="w-full flex justify-center">
 {{ collection:articles limit="5" }}
 <article class="max-w-xl shortParagraph">
-    <h2>{{ title }}</h2>
-    <p>{{ content }}</p>
-    <!-- <img src="{{ main_image }}"> -->
+    <h2 class="text-4xl font-bold">{{ title }}</h2>
+    <p class="shortParagraph">{{ content }}</p>
 </article>
 
 {{ /collection:articles}}

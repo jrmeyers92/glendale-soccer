@@ -19,6 +19,9 @@ mix.postCss('resources/css/tailwind.css', 'public/css', [
     require('tailwindcss'),
 ])
 
+mix.sass('resources/sass/app.scss', 'public/css');
+
+
 if (mix.inProduction()) {
    mix.version();
 }
